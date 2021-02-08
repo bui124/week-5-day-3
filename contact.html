@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact Us | Local Pet Adoption Service | Home</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="js/contact_scripts.js"></script>
+
+    </head>
+    <body>
+        <!-- Container to wrap everything -->
+        <div id="container">
+            <header>
+                <h1>Contact Us</h1>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="adoptees.html">Available Adoptees</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <main>
+                <h2>Find Your Furry Friend? Let Us Know</h2>
+                <p>If you haven't already, head over to the <a href="adoptees.html">Available Adoptees</a> page and see who still needs a home. Once you've made a decision, use the form below to let us know and we'll contact ASAP to come in for a visit.</p><br>
+                <form action="/signup" method="post" class="contact-form">
+                    <fieldset>
+                        <legend>Adoption Interest Form</legend>
+                        <label>Enter your full name</label><br>
+                        <input type="text" name="name"><br>
+                        
+                        <br><label>Select your gender</label><br>
+                        <input type="radio" name="gender" value="male"/>Male
+                        <input type="radio" name="gender" value="female"/>Female <br/>
+                        <br><label>How should we contact you?</label>
+                        <select id="contactSelect" onchange="displayContactFields()">
+                            <option value="">Select One</option>
+                            <option value="email">Email</option>
+                            <option value="phone">Phone</option>
+                        </select>
+                        <div id="emailFields" style="display:none">
+                            <label>Enter your email</label><br>
+                            <input type="email" name="email"><br>
+                        </div>
+                        
+                        <div id="phoneFields" style="display:none">
+                            <label>Enter your phone</label><br>
+                            <input type="text" name="phone"><br>
+                        </div>
+
+
+                        <br><label>Who are you interseted in adopting?</label><br>
+                        <select>
+                            <option>Reno</option>
+                            <option>Athena</option>
+                            <option>Simba</option>
+                        </select><br><br>
+                        <input type="submit"  value="Submit">
+                    </fieldset>
+                </form>
+            </main>
+
+            <footer>&copy; Copyright 2021</footer>
+        </div> <!-- End Container -->
+    </body>
+</html>

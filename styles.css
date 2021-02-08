@@ -1,0 +1,278 @@
+header {
+    width: 100%;
+    padding-top: 3em;
+}
+nav {
+    font-weight: 400;
+}
+
+body {
+    margin-left: 400px;
+    width: 800px;
+}
+
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding-right: 25px;
+    line-height: 100px;
+    font-size: 28px;
+    font-weight: bolder;
+}
+
+main ul {
+    list-style-type: none;
+}
+main ul li:before {
+    content: "\1F436";
+    display: inline-block;
+    padding-right: 3px;
+    vertical-align: middle;
+    font-weight: 900;
+
+}
+main #infoBox {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: rgba(255, 255, 255, 0.75);
+    padding: 2em;
+    position: absolute;
+    width: 30%;
+    height: 150px;
+    float: right;
+    border-radius: 1em;
+}
+
+main #gallery {
+    list-style-type: none;
+}
+
+main #gallery li{
+    position: relative;
+    display: inline-block;
+    width: 300px;
+    float: left;
+    margin-right: 30px;
+}
+
+main #gallery li img{
+    width: 300px;
+    height: 150px;
+}
+
+main #gallery li .description {
+    visibility: hidden;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.75);
+}
+
+main #gallery li .caption {
+    text-align: center;
+}
+
+main #gallery li:hover {
+    cursor: pointer;
+}
+
+main #gallery li:hover .description {
+    visibility: visible;
+}
+
+nav a:hover {
+    color: #fff;
+}
+
+nav a:visited {
+    color: #000;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #009900;
+}
+h2::before{
+    content: "\1F415 \1F680";
+    display: inline-block;
+    padding-right: 3px;
+    vertical-align: middle;
+    font-weight: 900;
+}
+
+body {
+    background-image: url(https://cdn.hipwallpaper.com/i/58/10/cFquhp.jpg);
+    padding-left: 25px;
+    padding-right: 25px;
+}
+#adoptees img:hover {
+    filter: grayscale(100%);
+}
+
+main p::first-letter {
+    color:#009900;
+    font-weight: bolder;
+}
+
+
+/* Activities */
+table {
+    width: 1000px;
+    margin: 4em auto 0 auto;
+}
+caption {
+    background: #009900;
+    height: 40px;
+    color: #fff;
+    font-size: 1.3em;
+    font-weight: bold;
+    padding-top: 1em;
+}
+thead, tfoot {
+    background: #BDE1FF;
+}
+tbody {
+    background: #98FB98;
+    text-align: center;
+}
+th, td {
+    width: 225px;
+    height: 75px;
+    vertical-align: middle;
+    border: solid 1px #009900;
+}
+th:first-child {
+    width: 125px;
+    height: 50px;
+    background: #00cc00;
+    color: #fff;
+}
+td:first-child {
+    font-weight: bold;
+    background: #BDE1FF;
+}
+tfoot {
+    text-align: center;
+}
+
+/* Contact */
+span:first-child {
+    font-weight: bold;
+}
+
+form label {
+    font-weight: bold;
+}
+.contact-form legend {
+    color: #009900;
+    text-transform: lowercase;
+    font-weight:bold;
+}
+.contact-form label, input{
+    padding-top: 10px;
+    display: block;
+}
+.contact-form input {
+    width: 500px;
+}
+.contact-form label, input{
+    display:inline;
+}
+.contact-form label {
+    padding-top: 10px;
+}
+.contact-form label, select {
+    display: inline;
+}
+.contact-form select {
+    width: 150px;
+    text-align-last: center;
+}
+
+.contact-form option {
+    text-align: center;
+}
+.contact-form label, textarea {
+    display: block;
+}
+.contact-form textarea {
+    width: 500px;
+    height: 150px;
+}
+
+form .button {
+    width: 49%;
+    text-align: right;
+}
+form .button input {
+    width: 8em;
+    height: 2.5em;
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: #009900;
+    color: #fff;
+    border: none;
+}
+form .button{
+    margin: 1.5em 0 1.5em 2em;
+}
+
+footer {
+    display: inline-block;
+}
+
+
+#galleryPage .lightbox-toggle {
+    color: black;
+}
+  
+#galleryPage .backdrop {
+    z-index: 1;
+    opacity: .0;
+    filter: alpha(opacity=0);
+    display: none;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: #000;
+}
+#galleryPage .box {
+    z-index: 2;
+    position: fixed;
+    opacity: 1;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    height: auto;
+    width: 600px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    -moz-box-shadow: 0px 0px 5px #444444;
+    -webkit-box-shadow: 0px 0px 5px #444444;
+    box-shadow: 0px 0px 5px #444444;
+}
+
+* {
+    z-index: 0;
+}
+
+#galleryPage .close {
+    float: right;
+    cursor: pointer;
+}
+
+#galleryPage #photo a img {
+    width: 400px;
+}
+
+#galleryPage .box img {
+    width:100%;
+}

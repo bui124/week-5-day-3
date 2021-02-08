@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Local Pet Adoption Service | Home</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    </head>
+    <body id="galleryPage">
+        <!-- Container to wrap everything -->
+        <div id="container">
+            <header>
+                <h1 id="test123">Local Pet Adoption Service</h1>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="adoptees.html">Available Adoptees</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <main>
+                <h2>Gallery</h2>
+                <div id="showcase">
+                    <ul id="gallery">
+                    </ul>
+                    
+                    <div id="infoBox" style="display:none">
+                        <div id="infoHeading"></div>
+                        <div id="infoText"></div>
+                        <div id="infoClose"></div>
+                    </div>
+                </div>
+                <div class="backdrop"></div>
+
+                <div class="box">
+                    <div class="close">x</div>
+                </div>
+
+            </main>
+            <section>
+
+            </section>
+            <footer>&copy; Copyright 2021</footer>
+        </div> <!-- End Container -->
+        <script src="js/site_scripts.js"></script>
+        <script>
+            var galleryImages = [];
+            var fileNames = [];
+            var imageList = [];
+            var image;
+            var openList;
+            var closeList = "</li>";
+
+            var openCaptionTag = "<p class='caption'>";
+            var closeCaptionTag = "</p>";
+
+            var openDescTag = "<p class = 'description' onclick='openInfoBox(";
+            var middleDescTag = ")'>"
+            var closeDescTag = "</p>";
+
+            //start of infobox data
+            var openInfoHeading;
+            var closeInfoHeading = "</p>";
+
+            var openInfoText;
+            var closeInfoText = "</p>";
+
+            document.getElementById("infoClose").innerHTML = "<p onclick='closeInfo()'>Click This to Close</p>";
+            //end of infobox data
+
+            var captionTexts = [];
+            captionTexts.push(
+                'What pretty eyes', 
+                'Something has caught your eye', 
+                'It\'s a staredown', 
+                'I see someone hiding',
+                'Catch!',
+                'Ready to jump',
+                'Chilling like a villain',
+                'Outdoor Watch',
+                'Hungry?',
+                'Henlo Puppy'
+                );
+
+            var descTexts = [];
+            descTexts.push(
+                'Adopt a dog today', 
+                'Bring one home today', 
+                'Adopt a dog today', 
+                'Bring one home today',
+                'Adopt a dog today', 
+                'Bring one home today',
+                'Adopt a dog today', 
+                'Bring one home today',
+                'Adopt a dog today', 
+                'Bring one home today',
+                );
+
+            var infoTexts = [
+                'text1',
+                'text2',
+                'text3',
+                'text4',
+                'text5',
+                'text6',
+                'text7',
+                'text8',
+                'text9',
+                'text10'
+            ];
+
+            for (var i=0; i<10; i++) {
+                fileNames.push("gallery-"+(i+1));
+                galleryImages.push("<a href='#/' class='lightbox-toggle'><img src='images/gallery/" + fileNames[i] + ".jpg' "+ "alt='photo" + (i+1) + "''></a>");
+                openList = "<li class='photoClass' id='photo" + (i+1) + "'>";
+                image = openList + openDescTag + i + middleDescTag + descTexts[i] + closeDescTag + galleryImages[i] + openCaptionTag + captionTexts[i] + closeCaptionTag + closeList;
+                
+                imageList.push(image);
+            }
+
+            function closeInfo() {
+                document.getElementById("infoBox").style.display = "none";
+            }
+
+            function openInfoBox(photoId) {
+                document.getElementById("infoBox").style.display = "block";
+                document.getElementById("infoText").innerHTML = infoTexts[photoId];
+                document.getElementById("infoHeading").innerHTML = captionTexts[photoId]; //set the heading of the infobox to the appropriate description
+            }
+
+            document.getElementById("gallery").innerHTML = imageList.join(" ");
+
+
+        </script>
+    </body>
+</html>
